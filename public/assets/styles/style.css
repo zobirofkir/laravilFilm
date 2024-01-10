@@ -1,0 +1,17 @@
+body {
+    background: linear-gradient(to top, black , rgb(49, 49, 49));
+    background-repeat: no-repeat;
+    background-size: cover;
+    margin: 0;
+}
+
+#data{
+    font-weight: 900;
+    padding: 10px;
+    text-transform: uppercase;
+    color: white;
+}
+
+.styleImageData{
+    padding: 5px;
+}
