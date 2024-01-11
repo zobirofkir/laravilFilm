@@ -1,0 +1,198 @@
+@extends('layouts.app')
+
+@section('content')
+
+<div class="text-center">
+    <img src="/assets/images/remove-bg.png" alt="Film Strip">
+</div>
+
+<div class="container mt-4">
+    <div class="row justify-content-center">
+        <div class="col-md-8">
+            <div class="card">
+                <div class="card-header bg-dark text-light">{{ __('Login') }}</div>
+
+                <div class="card-body">
+                    <form method="POST" action="{{ route('login') }}">
+                        @csrf
+
+                        <div class="mb-3 row">
+                            <label for="email" class="col-md-4 col-form-label text-md-end">{{ __('Email Address') }}</label>
+                            <div class="col-md-6">
+                                <input id="email" type="email" class="form-control @error('email') is-invalid @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
+
+                                @error('email')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <label for="password" class="col-md-4 col-form-label text-md-end">{{ __('Password') }}</label>
+                            <div class="col-md-6">
+                                <input id="password" type="password" class="form-control @error('password') is-invalid @enderror" name="password" required autocomplete="current-password">
+
+                                @error('password')
+                                    <span class="invalid-feedback" role="alert">
+                                        <strong>{{ $message }}</strong>
+                                    </span>
+                                @enderror
+                            </div>
+                        </div>
+
+                        <div class="mb-3 row">
+                            <div class="col-md-6 offset-md-4">
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" name="remember" id="remember" {{ old('remember') ? 'checked' : '' }}>
+                                    <label class="form-check-label" for="remember">
+                                        {{ __('Remember Me') }}
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="row">
+                            <div class="col-md-8 offset-md-4">
+                                <button type="submit" class="btn btn-dark">
+                                    {{ __('Login') }}
+                                </button>
+
+                                @if (Route::has('password.request'))
+                                    <a class="btn btn-link text-dark" href="{{ route('password.request') }}">
+                                        {{ __('Forgot Your Password?') }}
+                                    </a>
+                                @endif
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <!-- Footer -->
+    <footer class="text-center text-lg-start bg-body-tertiary text-muted">
+    <!-- Section: Social media -->
+    <section class="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
+        <!-- Left -->
+        <div class="me-5 d-none d-lg-block">
+        <span>Get connected with us on social networks:</span>
+        </div>
+        <!-- Left -->
+
+        <!-- Right -->
+        <div>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-facebook-f"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-twitter"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-google"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-instagram"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-linkedin"></i>
+        </a>
+        <a href="" class="me-4 text-reset">
+            <i class="fab fa-github"></i>
+        </a>
+        </div>
+        <!-- Right -->
+    </section>
+    <!-- Section: Social media -->
+
+    <!-- Section: Links  -->
+    <section class="">
+        <div class="container text-center text-md-start mt-5">
+        <!-- Grid row -->
+        <div class="row mt-3">
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+            <!-- Content -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                <i class="fas fa-gem me-3"></i>Company name
+            </h6>
+            <p>
+                This website offre whatch all movies for free in this year 2024/2025
+            </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Categories
+            </h6>
+            <p>
+                <a href="#!" class="text-reset">Action</a>
+            </p>
+            <p>
+                <a href="#!" class="text-reset">Comedies</a>
+            </p>
+            <p>
+                <a href="#!" class="text-reset">Cartons</a>
+            </p>
+            <p>
+                <a href="#!" class="text-reset">Romantic</a>
+            </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">
+                Last Years
+            </h6>
+            <p>
+                <a href="" class="text-reset">2024</a>
+            </p>
+            <p>
+                <a href="" class="text-reset">2023</a>
+            </p>
+            <p>
+                <a href="" class="text-reset">2022</a>
+            </p>
+            <p>
+                <a href="" class="text-reset">2021</a>
+            </p>
+            </div>
+            <!-- Grid column -->
+
+            <!-- Grid column -->
+            <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+            <!-- Links -->
+            <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
+            <p><i class="fas fa-home me-3"></i> Imouzer Kanda, Morocco</p>
+            <p>
+                <i class="fas fa-envelope me-3"></i>
+                movies@zobirofkir.com
+            </p>
+            <p><i class="fas fa-phone me-3"></i> + 212 619920942</p>
+            <p><i class="fas fa-print me-3"></i> + 212 619920942</p>
+            </div>
+            <!-- Grid column -->
+        </div>
+        <!-- Grid row -->
+        </div>
+    </section>
+    <!-- Section: Links  -->
+
+    <!-- Copyright -->
+    <div class="text-center p-4" style="background-color: rgba(0, 0, 0, 0.05);">
+        © 2024:
+        <a class="text-reset fw-bold" href="https://zobirofkir.com/">zobirofkir.com</a>
+    </div>
+    <!-- Copyright -->
+    </footer>
+<!-- Footer -->
+
+@endsection

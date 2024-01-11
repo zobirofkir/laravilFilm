@@ -23,6 +23,7 @@
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
             </a>
+
             <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
                 <li><a class="dropdown-item" href="{{url('/action')}}">Action</a></li>
                 <li><a class="dropdown-item" href="{{url('/comedie')}}">Comedies</a></li>
@@ -32,12 +33,16 @@
             </ul>
             </li>
         </ul>
-        
+            
         <form class="d-flex" id="searchForm">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-            <button class="btn btn-outline-success" name="submit" id="submit"  type="submit">Search</button>
+            <button class="btn text-black bg-white" style="font-weight: 900;" name="submit" id="submit"  type="submit">Search</button>
         </form>
 
+        <a href="{{url('/login')}}" class="login">login</a>
+        <a href="{{url('/register')}}" class="register">register</a>
+
+        
         <div id="totalResults"></div>
         </div>
     </div>
@@ -49,6 +54,26 @@
 
 
         <div id="pagination"></div>
+
+        <!-- Add this modal structure in your HTML file -->
+        <div class="modal fade" id="movieDetailsModal" tabindex="-1" role="dialog" aria-labelledby="movieDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable modal-fullscreen modal-fullscreen-md-down" role="document">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="movieDetailsModalLabel">Movie Details</h5>
+                <button type="button" class="close bg-transparent" style="border-radius: 10px; background:white;" data-bs-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body" id="movieDetailsModalBody">
+                <!-- Movie details content will be dynamically inserted here -->
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+            </div>
+            </div>
+        </div>
+        </div>
     </div>
 
 
@@ -174,6 +199,7 @@
     <!-- Copyright -->
     </footer>
 <!-- Footer -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 <script src="/assets/main.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
