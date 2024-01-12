@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Contact;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -9,6 +10,11 @@ class ContactController extends Controller
     /**
      * Display a listing of the resource.
      */
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     public function index()
     {
         //
@@ -19,7 +25,7 @@ class ContactController extends Controller
      */
     public function create()
     {
-        //
+        return view("movies.movie");
     }
 
     /**
@@ -27,7 +33,19 @@ class ContactController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $data = new Contact();
+        $data->username = $request->input("username");
+        $data->email = $request->input("email");
+        $data->subject = $request->input("subject");
+        $data->text = $request->input("text");
+        if ($data->save()){
+            $compa = "We will Add This Movie Soon .";
+            return view("movies.movie", compact("compa"))
+            ->with('message', 'We will Add This Movie Soon .');
+        }else {
+            $compa = "Bad Request";
+            return view("movies.movie", compact("compa"));
+        }
     }
 
     /**

@@ -208,18 +208,42 @@
                 <h6 class="text-uppercase fw-bold mb-4">
                     Categories
                 </h6>
-                <p>
-                    <a href="#" class="text-reset category-link" data-category="28">Action</a>
-                </p>
-                <p>
-                    <a href="#" class="text-reset category-link" data-category="35">Comedies</a>
-                </p>
-                <p>
-                    <a href="#" class="text-reset category-link" data-category="16">Cartoons</a>
-                </p>
-                <p>
-                    <a href="#" class="text-reset category-link" data-category="10749">Romantic</a>
-                </p>
+
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+            <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle text-uppercase fw-bold mb-4" style="color: #878787;" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                Categories
+            </a>
+
+                <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="28">Action</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="12">Adventure</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="16">Animation</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="28">Action</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="35">Comedy</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="80">Crime</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="99">Documentary</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="18">Drama</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10751">Family</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="14">Fantasy</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="36">History</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10402">Music</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="9648">Mystery</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="878">Science Fiction</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10770">TV Movie</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="53">Thriller</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10752">War</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="37">Western</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="16">Cartoons</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10749">Romance</a></li>
+                    <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="27">Horror</a></li>
+                    <li><hr class="dropdown-divider"></li>
+                </ul>
+            
+            </li>
+        </ul>
+
+
                 </div>
             <!-- Grid column -->
 
@@ -229,46 +253,47 @@
             <h6 class="text-uppercase fw-bold mb-4">
                 Last Years
             </h6>
-            <p>
-                <a href="#" class="text-reset last-year-link">2024</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2023</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2022</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2021</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2018</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1999</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1900</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2019</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">2015</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1889</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1899</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1990</a>
-            </p>
-            <p>
-                <a href="#" class="text-reset last-year-link">1997</a>
-            </p>
+            <ul class="navbar-nav ">
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-uppercase fw-bold mb-4" style="color: #878787;" href="#" id="yearsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Years
+    </a>
+        <ul class="dropdown-menu" aria-labelledby="yearsDropdown">
+            <!-- Add 'All Years' link with Bootstrap classes -->
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="all"><i class="bi bi-calendar"></i> All Years</a></li>
+            <!-- Existing year links -->
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="28">2024</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="35">2023</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="16">2022</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2021</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2020</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2019</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2018</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2017</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2016</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2015</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2014</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2013</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2012</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2011</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2009</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2008</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2007</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2006</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2005</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2004</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2003</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2002</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2001</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2000</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1999</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1998</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1997</a></li>
+            <li><hr class="dropdown-divider"></li>
+        </ul>
+    </li>
 
+        </ul>
             </div>
             <!-- Grid column -->
 
