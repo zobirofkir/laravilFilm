@@ -33,3 +33,38 @@ body {
     font-weight: 900;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
+
+.scrollable-categories {
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.loginRegister {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    margin-left: 70%;
+    justify-content: flex-end;
+}
+
+#navStyleLogo{
+    font-weight: 900;
+    font-size: 30px;
+}
+
+.videoData{
+    size: 50px;
+    text-align: center;
+}
+
+#styleIm{
+    text-align: center;
+    font-size: 10px;
+}
+
+/* styles.css or your custom CSS file */
+.img-styled {
+    font-size: 5px;
+    max-height: 40px;
+    width: auto;
+}

@@ -2,7 +2,7 @@
 
 @section('content')
 
-<div class="text-center">
+<div class="d-flex align-items-center justify-content-center" style="overflow-x: hidden; height: 100vh;">
     <img src="/assets/images/remove-bg.png" alt="Film Strip">
 </div>
 
@@ -127,23 +127,23 @@
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-                Categories
-            </h6>
-            <p>
-                <a href="#!" class="text-reset">Action</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Comedies</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Cartons</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Romantic</a>
-            </p>
-            </div>
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Categories
+                </h6>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="28">Action</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="35">Comedies</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="16">Cartoons</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="10749">Romantic</a>
+                </p>
+                </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
@@ -153,17 +153,45 @@
                 Last Years
             </h6>
             <p>
-                <a href="" class="text-reset">2024</a>
+                <a href="#" class="text-reset last-year-link">2024</a>
             </p>
             <p>
-                <a href="" class="text-reset">2023</a>
+                <a href="#" class="text-reset last-year-link">2023</a>
             </p>
             <p>
-                <a href="" class="text-reset">2022</a>
+                <a href="#" class="text-reset last-year-link">2022</a>
             </p>
             <p>
-                <a href="" class="text-reset">2021</a>
+                <a href="#" class="text-reset last-year-link">2021</a>
             </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2018</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1999</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1900</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2019</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2015</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1889</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1899</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1990</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1997</a>
+            </p>
+
             </div>
             <!-- Grid column -->
 
@@ -171,7 +199,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> Imouzer Kanda, Morocco</p>
+            <p><i class="fas fa-home me-3"></i> Imouzer Kandar, Morocco</p>
             <p>
                 <i class="fas fa-envelope me-3"></i>
                 movies@zobirofkir.com

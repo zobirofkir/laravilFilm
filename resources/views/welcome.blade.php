@@ -5,51 +5,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="/assets/styles/style.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <title>CSW</title>
+    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
+    <title>csw-movies</title>
 </head>
 <body>
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-    <div class="container-fluid">
-        <a class="navbar-brand" href="{{url('/')}}">CSW</a>
+        <div class="container-fluid">
+        <a class="navbar-brand" id="navStyleLogo" href="{{ url('/') }}">
+            <img src="/assets/images/logo.png" style="font-size: 10px; max-height: 60px; width: auto;" alt="">
+        </a>
+
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+            <div class="loginRegister">
+                <a href="{{url('/login')}}" class="login">login</a>
+                <a href="{{url('/register')}}" class="register">register</a>
+            </div>
+
+            <div id="totalResults"></div>
+            </div>
+        </div>
+    </nav>
+
+   <div class="container" style="margin-top: 50px;">
+        <form class="d-flex text-center" id="searchForm">
+            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
+            <button class="btn text-black bg-white" style="font-weight: 900;" name="submit" id="submit"  type="submit">Search</button>
+        </form>        
+    </div>
+
+
+    <div class="container" style="margin-top: 30px;">
+        <h5 class="text-white  text-center">Welcome To CSW-Movies</h5>
+    </div>
+
+
+    <div class="container mt-5">
+        <div class="container text-center d-flex p-10 m-10" id="dataStyle">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-            <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="{{url('/')}}">Home</a>
-            </li>
             <li class="nav-item dropdown">
-            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+            <a class="nav-link dropdown-toggle text-white" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                 Categories
             </a>
 
-            <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-                <li><a class="dropdown-item" href="{{url('/action')}}">Action</a></li>
-                <li><a class="dropdown-item" href="{{url('/comedie')}}">Comedies</a></li>
-                <li><a class="dropdown-item" href="{{url('/cartoon')}}">Cartons</a></li>
-                <li><a class="dropdown-item" href="{{url('/romantic')}}">Romantic</a></li>
+            <ul class="dropdown-menu text-center" aria-labelledby="navbarDropdown">
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="28">Action</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="12">Adventure</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="16">Animation</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="28">Action</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="35">Comedy</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="80">Crime</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="99">Documentary</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="18">Drama</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10751">Family</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="14">Fantasy</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="36">History</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10402">Music</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="9648">Mystery</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="878">Science Fiction</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10770">TV Movie</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="53">Thriller</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10752">War</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="37">Western</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="16">Cartoons</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="10749">Romance</a></li>
+                <li><a class="dropdown-item nav-link text-dark text-uppercase" href="#" data-category="27">Horror</a></li>
                 <li><hr class="dropdown-divider"></li>
             </ul>
+            
             </li>
         </ul>
-            
-        <form class="d-flex" id="searchForm">
-            <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
-            <button class="btn text-black bg-white" style="font-weight: 900;" name="submit" id="submit"  type="submit">Search</button>
-        </form>
 
-        <a href="{{url('/login')}}" class="login">login</a>
-        <a href="{{url('/register')}}" class="register">register</a>
+    <ul class="navbar-nav ">
+        <li class="nav-item dropdown">
+    <a class="nav-link dropdown-toggle text-white" href="#" id="yearsDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+        Years
+    </a>
+        <ul class="dropdown-menu" aria-labelledby="yearsDropdown">
+            <!-- Add 'All Years' link with Bootstrap classes -->
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="all"><i class="bi bi-calendar"></i> All Years</a></li>
+            <!-- Existing year links -->
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="28">2024</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="35">2023</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="16">2022</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2021</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2020</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2019</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2018</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2017</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2016</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2015</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2014</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2013</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2012</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2011</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2009</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2008</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2007</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2006</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2005</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2004</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2003</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2002</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2001</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">2000</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1999</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1998</a></li>
+            <li><a class="dropdown-item text-uppercase text-reset last-year-link" href="#" data-category="10749">1997</a></li>
+            <li><hr class="dropdown-divider"></li>
+        </ul>
+    </li>
 
-        
-        <div id="totalResults"></div>
+        </ul>
+
+
         </div>
-    </div>
-    </nav>
-
-    <div class="container mt-5">
-        <h1 class="mb-4 text-white text-center m-10">Welcome To CSW-Movies</h1>
         <div id="imagePath" class="row"></div>
 
 
@@ -132,23 +204,23 @@
 
             <!-- Grid column -->
             <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-            <!-- Links -->
-            <h6 class="text-uppercase fw-bold mb-4">
-                Categories
-            </h6>
-            <p>
-                <a href="#!" class="text-reset">Action</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Comedies</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Cartons</a>
-            </p>
-            <p>
-                <a href="#!" class="text-reset">Romantic</a>
-            </p>
-            </div>
+                <!-- Links -->
+                <h6 class="text-uppercase fw-bold mb-4">
+                    Categories
+                </h6>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="28">Action</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="35">Comedies</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="16">Cartoons</a>
+                </p>
+                <p>
+                    <a href="#" class="text-reset category-link" data-category="10749">Romantic</a>
+                </p>
+                </div>
             <!-- Grid column -->
 
             <!-- Grid column -->
@@ -158,17 +230,45 @@
                 Last Years
             </h6>
             <p>
-                <a href="" class="text-reset">2024</a>
+                <a href="#" class="text-reset last-year-link">2024</a>
             </p>
             <p>
-                <a href="" class="text-reset">2023</a>
+                <a href="#" class="text-reset last-year-link">2023</a>
             </p>
             <p>
-                <a href="" class="text-reset">2022</a>
+                <a href="#" class="text-reset last-year-link">2022</a>
             </p>
             <p>
-                <a href="" class="text-reset">2021</a>
+                <a href="#" class="text-reset last-year-link">2021</a>
             </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2018</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1999</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1900</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2019</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">2015</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1889</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1899</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1990</a>
+            </p>
+            <p>
+                <a href="#" class="text-reset last-year-link">1997</a>
+            </p>
+
             </div>
             <!-- Grid column -->
 
@@ -176,7 +276,7 @@
             <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
             <!-- Links -->
             <h6 class="text-uppercase fw-bold mb-4">Contact</h6>
-            <p><i class="fas fa-home me-3"></i> Imouzer Kanda, Morocco</p>
+            <p><i class="fas fa-home me-3"></i> Imouzer Kandar, Morocco</p>
             <p>
                 <i class="fas fa-envelope me-3"></i>
                 movies@zobirofkir.com
