@@ -2,7 +2,7 @@
 
 @section('content')
 <div class="d-flex align-items-center justify-content-center" style="overflow-x: hidden; height: 100vh;">
-    <img src="/assets/images/remove-bg.png" alt="Film Strip">
+    <img src="{{asset('/assets/images/remove-bg.png')}}" alt="Film Strip">
 </div>
 
 <div class="container">

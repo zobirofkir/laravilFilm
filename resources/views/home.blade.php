@@ -7,18 +7,19 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/assets/styles/style.css">
+    <link rel="stylesheet" href="{{asset('/assets/styles/style.css')}}">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
-    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
-    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="{{asset('/assets/images/logo.png')}}" type="image/x-icon">
     <title>{{Auth::user()->name}}</title>
 </head>
 <body>
 
    <div class="container" style="margin-top: 50px;">
-   <div class="container" style="margin-top: 30px;">
-        <h5 class="text-white  text-center">Hello {{ Auth::user()->name }}</h5>
-    </div>
+   <div class="container mt-4">
+    <h5 class="text-white text-center text-uppercase m-5 fs-5 fs-md-4 fs-lg-3">
+        {{ Auth::user()->name }}  📽️📽️😎
+    </h5>
+</div>
 
         <form class="d-flex text-center" id="searchForm">
             <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search" id="searchInput">
@@ -140,7 +141,7 @@
     </div>
     <!-- Copyright -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
-<script src="/assets/main.js"></script>
+<script src="{{asset('/assets/main.js')}}"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
 <!-- Bootstrap JS and jQuery -->

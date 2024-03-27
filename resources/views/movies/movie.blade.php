@@ -7,8 +7,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbs5e2d/ToUE5/1F/i7X1o7OjcIM9xXnYl5frV7bf6BZHExlVRgmvL4eXaCF0zj" crossorigin="anonymous">
-    <link rel="icon" href="/assets/images/logo.png" type="image/x-icon">
-    <title>Movie Post Form</title>
+    <link rel="icon" href="{{asset('/assets/images/logo.png')}}" type="image/x-icon">
+    <title>{{Auth::user()->name}}</title>
 </head>
 <body class="bg-dark text-white">
 

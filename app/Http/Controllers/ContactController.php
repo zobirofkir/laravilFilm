@@ -2,8 +2,10 @@
 
 namespace App\Http\Controllers;
 
+use App\Mail\MyMail;
 use App\Models\Contact;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Mail;
 
 class ContactController extends Controller
 {
@@ -38,11 +40,21 @@ class ContactController extends Controller
         $data->email = $request->input("email");
         $data->subject = $request->input("subject");
         $data->text = $request->input("text");
-        if ($data->save()){
-            $compa = "We will Add This Movie Soon .";
+    
+        if ($data->save()) {
+            $dataEmail = [
+                'username' => $data->username,
+                'email'=>$data->email,
+                'subject'=>$data->subject,
+                'text'=>$data->text
+            ];
+    
+            Mail::to($request->input("email"))->send(new MyMail($dataEmail));
+    
+            $compa = "We will Add This Movie Soon.";
             return view("movies.movie", compact("compa"))
-            ->with('message', 'We will Add This Movie Soon .');
-        }else {
+                ->with('message', 'We will Add This Movie Soon.');
+        } else {
             $compa = "Bad Request";
             return view("movies.movie", compact("compa"));
         }
